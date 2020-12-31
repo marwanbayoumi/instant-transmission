@@ -1,0 +1,25 @@
+{
+  "name": "instant-transmission",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "test"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "soundboard",
+    "nodejs"
+  ],
+  "author": "marwan bayoumi",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/opus": "^0.3.3",
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "ffmpeg-static": "^4.2.7",
+    "nodemon": "^2.0.6"
+  }
+}
