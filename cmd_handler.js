@@ -14,6 +14,7 @@ module.exports = {
         }
     },
     about: {
+        name:'!about',
         execute(msg, args) {
             name: '!about',
                 msg.reply('States if eatura is ready for Omar');
