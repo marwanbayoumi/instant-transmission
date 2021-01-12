@@ -7,10 +7,6 @@ const TOKEN = process.env.TOKEN
 
 bot.login(TOKEN)
 
-bot.on('ready', () => {
-    console.info(`Logged in as ${bot.user.tag}!`);
-});
-
 /* bot.on('voiceStateUpdate', (newState, oldState) => {
     let oldUserChannel = oldState.voiceChannel
     let newUserChannel = newState.voiceChannel
@@ -30,23 +26,19 @@ bot.on('ready', () => {
 
 }) */
 
+bot.on('ready', () => {
+    console.info(`Logged in as ${bot.user.tag}!`);
+});
+
 bot.on('message', msg => {
     const args = msg.content.split(/ +/);
     const command = args.shift().toLowerCase();
     if (!bot.commands.has(command)) return;
     try {
         bot.commands.get(command).execute(msg, args);
-        /* var voiceChannel = msg.member.voice.channel;
-        if (voiceChannel) {
-            voiceChannel.join().then(connection => {
-                const dispatcher = connection.play('./media/dbz_it.mp3');
-                dispatcher.on("finish", end => {
-                    voiceChannel.leave();
-                });
-            }).catch(err => console.log(err)); */
     } catch (err) {
         console.error(err)
-        msg.reply('You need to be in a voice channel.')
+        msg.reply('Something went wrong.')
     }
 })
 
