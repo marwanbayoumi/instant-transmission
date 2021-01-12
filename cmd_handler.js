@@ -21,6 +21,8 @@ module.exports = {
                     case args.includes('p'):
                         dispatcher(voiceChannel, sfx.dbz_bp)
                 }
+            }else{
+                msg.reply('You need to be in a voice channel.')
             }
         }
     }
