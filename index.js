@@ -42,8 +42,6 @@ bot.on('message', msg => {
     }
 })
 
-
-
 Object.keys(cmd_hndler).map(key => {
     bot.commands.set(cmd_hndler[key].name, cmd_hndler[key])
 })
