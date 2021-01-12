@@ -1,6 +1,6 @@
 const sfx = require('./sfx.js')
 
-function dispatcher(voiceChannel,sound) {
+function dispatcher(voiceChannel, sound) {
     voiceChannel.join().then(connection => {
         const dispatcher = connection.play(sound);
         dispatcher.on("finish", end => {
@@ -24,3 +24,4 @@ module.exports = {
             }
         }
     }
+}

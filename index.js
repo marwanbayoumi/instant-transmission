@@ -36,11 +36,17 @@ bot.on('message', msg => {
     if (!bot.commands.has(command)) return;
     try {
         bot.commands.get(command).execute(msg, args);
+        msg.reply('## How-To \
+        1. Make sure you are inside a voice channel. \
+        2. Type `!gohan` case-insensitive. \
+        3. The sound effect will be played right away & the bot will immediately disconnect.')
     } catch (err) {
         console.error(err)
         msg.reply('Something went wrong.')
     }
 })
+
+
 
 Object.keys(cmd_hndler).map(key => {
     bot.commands.set(cmd_hndler[key].name, cmd_hndler[key])
