@@ -19,9 +19,7 @@ module.exports = {
             }
             else if (voiceChannel && args.includes('p')) {
                 dispatcher(voiceChannel, sfx.dbz_bp)
-            } else {
-                msg.reply('You need to be in a voice channel.')
-            }
+            } 
         }
     }
 }
