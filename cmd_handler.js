@@ -14,7 +14,7 @@ module.exports = {
         name: '!gohan',
         execute(msg, args) {
             var voiceChannel = msg.member.voice.channel;
-            if (voiceChannel && args.isEmpty()) {
+            if (voiceChannel && args ==='') {
                 dispatcher(voiceChannel, sfx.dbz_it)
             }
             else if (voiceChannel && args.includes('p')) {
