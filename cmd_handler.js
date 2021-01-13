@@ -15,9 +15,8 @@ module.exports = {
         execute(msg, args) {
             var voiceChannel = msg.member.voice.channel;
             // if (voiceChannel) {
-                switch (voiceChannel != null) {
+                switch (voiceChannel != null && args != null) {
                     case (args.length == 0):
-                        console.log('test');
                         dispatcher(voiceChannel, sfx.dbz_it)
                         break;
                     case (args.includes('p')):
