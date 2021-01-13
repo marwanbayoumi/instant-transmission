@@ -14,12 +14,26 @@ module.exports = {
         name: '!gohan',
         execute(msg, args) {
             var voiceChannel = msg.member.voice.channel;
-            if (voiceChannel && args.length == 0) {
-                dispatcher(voiceChannel, sfx.dbz_it)
+            if (voiceChannel) {
+                switch (args) {
+                    case (args.length == 0):
+                        dispatcher(voiceChannel, sfx.dbz_it)
+                        break;
+                    case (args.includes('p')):
+                        dispatcher(voiceChannel, sfx.dbz_bp)
+                        break;
+
+                }
             }
-            else if (voiceChannel && args.includes('p')) {
-                dispatcher(voiceChannel, sfx.dbz_bp)
-            } 
         }
     }
 }
+
+/*           if (voiceChannel && args.length == 0) {
+   dispatcher(voiceChannel, sfx.dbz_it)
+            }
+            else if (voiceChannel && args.includes('p')) {
+                dispatcher(voiceChannel, sfx.dbz_bp)
+            }else{
+                msg.reply('You need to be in a voice channel.')
+            } */

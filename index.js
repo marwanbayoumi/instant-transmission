@@ -38,7 +38,6 @@ bot.on('message', msg => {
         bot.commands.get(command).execute(msg, args);
     } catch (err) {
         console.error(err)
-        msg.reply('You need to be in a voice channel.')
     }
 })
 
