@@ -12,7 +12,7 @@ A simple Dragonball soundboard bot for discord built with [discord.js](https://d
 
 | Arguments |    Sound effect    |
 | :-------: | :----------------: |
-|     p     | [DBZ]Bright Punch  |
+|     p     | [DBZ] Bright Punch |
 |     a     |       About        |
-|    for    |       future       |
+|    no     | [JoJo] Oh no       |
 |   sound   |      effects       |
