@@ -22,6 +22,8 @@ module.exports = {
                     case (args.includes('p')):
                         dispatcher(voiceChannel, sfx.dbz_bp)
                         break;
+                    case (args.includes('no')):
+                        dispatcher(voiceChannel, sfx.oh_no)
 
                 }
             }
