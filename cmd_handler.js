@@ -14,9 +14,10 @@ module.exports = {
         name: '!gohan',
         execute(msg, args) {
             var voiceChannel = msg.member.voice.channel;
-            if (voiceChannel) {
-                switch (args) {
+            // if (voiceChannel) {
+                switch (voiceChannel != null) {
                     case (args.length == 0):
+                        console.log('test');
                         dispatcher(voiceChannel, sfx.dbz_it)
                         break;
                     case (args.includes('p')):
@@ -25,9 +26,8 @@ module.exports = {
                     case (args.includes('no')):
                         dispatcher(voiceChannel, sfx.oh_no)
                         break;
-
                 }
-            }
+            // }
         }
     }
 }
