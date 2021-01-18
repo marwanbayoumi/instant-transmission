@@ -3,5 +3,6 @@ module.exports =
     dbz_it: './media/dbz_it.mp3',
     dbz_bp: './media/dbz_bp.mp3',
     oh_no: './media/oh_no.mp3',
-    anime_wow: './media/anime_wow.mp3'
+    anime_wow: './media/anime_wow.mp3',
+    baka_kono: './media/bakayaro_konoyaro.mp3'
 }

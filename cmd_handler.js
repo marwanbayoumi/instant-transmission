@@ -27,6 +27,9 @@ module.exports = {
                 case (args.includes('wow')):
                     dispatcher(voiceChannel, sfx.anime_wow)
                     break;
+                case (args.includes('baka')):
+                    dispatcher(voiceChannel, sfx.baka_kono)
+                    break;
             }
         }
     }
